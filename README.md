@@ -74,7 +74,7 @@ Hernan Ruben Vilar
 ![image](https://user-images.githubusercontent.com/36265028/140660738-70a61d5f-8201-4f8c-af10-2a95267b6c25.png)
 
 
-#QRs de los Platos
+# QRs de los Platos
 
 Cerveza 
 ![image](https://user-images.githubusercontent.com/36265028/140660763-cd511d28-3732-4f76-9684-26057cfb4e6e.png)
@@ -89,30 +89,25 @@ Sprite
 ![image](https://user-images.githubusercontent.com/36265028/140660791-58ed6c2f-3220-4114-9da5-bb38c2a15336.png)
 
 
-#QRs de la Lista de Espera 
+# QRs de la Lista de Espera 
 ![image](https://user-images.githubusercontent.com/36265028/140660809-92e8af10-c36c-49ca-96c8-7afc3aa157b6.png)
 
 
-#QRs para las Propinas
+# QRs para las Propinas
 
 Excelente 
-
 ![image](https://user-images.githubusercontent.com/36265028/140660821-b394a9f2-9773-4258-87dd-5b653975673b.png)
 
 Muy bien 
-
 ![image](https://user-images.githubusercontent.com/36265028/140660827-69f18ff8-f360-4ec5-b458-2572cc24ab5b.png)
 
 Bien 
-
 ![image](https://user-images.githubusercontent.com/36265028/140660835-a1fe16e0-1271-430e-b1bb-5ba94a9d2640.png)
 
 Regular 
-
 ![image](https://user-images.githubusercontent.com/36265028/140660839-86ec8586-8d5d-4c7e-98cb-fec6ccdd4b53.png)
 
 Malo 
-
 ![image](https://user-images.githubusercontent.com/36265028/140660852-99adfe8d-1681-4744-8a3b-3515077ea2b5.png)
 
 
