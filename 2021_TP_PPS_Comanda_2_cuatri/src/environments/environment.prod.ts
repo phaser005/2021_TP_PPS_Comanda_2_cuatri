@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
-  firebaseConfig: {
-    apiKey: "AIzaSyBGvjdlwcC7jmTtjGDpdWa-O4JoDffqwXM",
-    authDomain: "pps-segundoparcial-losbuhos.firebaseapp.com",
-    projectId: "pps-segundoparcial-losbuhos",
-    storageBucket: "pps-segundoparcial-losbuhos.appspot.com",
-    messagingSenderId: "506480302106",
-    appId: "1:506480302106:web:c4a62cf63e0118c9d2d9a3"
+  firebaseConfig : {
+    apiKey: "AIzaSyCLwzfo21uo2lAAQf5u46We0saibXbZKRY",
+    authDomain: "comanda2021-986b7.firebaseapp.com",
+    projectId: "comanda2021-986b7",
+    storageBucket: "comanda2021-986b7.appspot.com",
+    messagingSenderId: "1010949520515",
+    appId: "1:1010949520515:web:ceb66bb461b5c410b0efb6"
   }
 };
