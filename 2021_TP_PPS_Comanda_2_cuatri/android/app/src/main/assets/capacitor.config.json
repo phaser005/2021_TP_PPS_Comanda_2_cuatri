@@ -1,6 +1,6 @@
 {
-	"appId": "pps.segundoparcial.losbuhos",
-	"appName": "PPS_SegundoParcial_LosBuhos",
+	"appId": "segundo.parcial.pps.arknights",
+	"appName": "SegundoParcial_PPS_Arknights",
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"plugins": {

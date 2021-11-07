@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "506480302106",
-    "project_id": "pps-segundoparcial-losbuhos",
-    "storage_bucket": "pps-segundoparcial-losbuhos.appspot.com"
+    "project_id": "comanda2021-986b7",
+    "storage_bucket": "gs://comanda2021-986b7.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:506480302106:android:f75a103a6a8215e0d2d9a3",
         "android_client_info": {
-          "package_name": "pps.segundoparcial.losbuhos"
+          "package_name": "segundo.parcial.pps.arknights"
         }
       },
       "oauth_client": [

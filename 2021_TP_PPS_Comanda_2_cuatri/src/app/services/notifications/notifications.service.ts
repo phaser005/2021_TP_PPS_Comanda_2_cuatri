@@ -150,7 +150,7 @@ export class NotificationsService {
                   data: {
                     'google.delivered_priority': 'high',
                     'google.original_priority': 'high',
-                    collapse_key: 'pps.segundoparcial.losbuhos',
+                    collapse_key: 'segundo.parcial.pps.arknights',
                   },
                   id: '1:506480302106:android:f75a103a6a8215e0d2d9a3',
                 },
