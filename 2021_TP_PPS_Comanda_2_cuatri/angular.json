@@ -93,6 +93,8 @@
             "styles": [],
             "scripts": [],
             "assets": [
+              "src/favicon.png",
+              "favicon.png",  
               {
                 "glob": "favicon.ico",
                 "input": "src/",

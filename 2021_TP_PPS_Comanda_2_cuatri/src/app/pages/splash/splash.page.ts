@@ -42,7 +42,7 @@ export class SplashPage implements OnInit {
       src: ['../assets/campanaServicio.mp3']
     });
     
-    sound.play();
+    //sound.play();
   }
 
 }
