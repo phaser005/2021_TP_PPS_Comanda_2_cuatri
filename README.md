@@ -96,18 +96,23 @@ Sprite
 #QRs para las Propinas
 
 Excelente 
+
 ![image](https://user-images.githubusercontent.com/36265028/140660821-b394a9f2-9773-4258-87dd-5b653975673b.png)
 
 Muy bien 
+
 ![image](https://user-images.githubusercontent.com/36265028/140660827-69f18ff8-f360-4ec5-b458-2572cc24ab5b.png)
 
 Bien 
+
 ![image](https://user-images.githubusercontent.com/36265028/140660835-a1fe16e0-1271-430e-b1bb-5ba94a9d2640.png)
 
 Regular 
+
 ![image](https://user-images.githubusercontent.com/36265028/140660839-86ec8586-8d5d-4c7e-98cb-fec6ccdd4b53.png)
 
 Malo 
+
 ![image](https://user-images.githubusercontent.com/36265028/140660852-99adfe8d-1681-4744-8a3b-3515077ea2b5.png)
 
 
