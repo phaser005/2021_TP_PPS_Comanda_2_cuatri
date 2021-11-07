@@ -76,16 +76,16 @@ Hernan Ruben Vilar
 
 # QRs de los Platos
 
-Cerveza 
+### Cerveza 
 ![image](https://user-images.githubusercontent.com/36265028/140660763-cd511d28-3732-4f76-9684-26057cfb4e6e.png)
 
-Coca Cola 
+### Coca Cola 
 ![image](https://user-images.githubusercontent.com/36265028/140660775-0a69e2db-65a9-40b2-98fa-14b2595e9177.png)
 
-Milanesa 
+### Milanesa 
 ![image](https://user-images.githubusercontent.com/36265028/140660782-e73f6aad-cec5-4f14-afe3-90c4f6fdbcbb.png)
 
-Sprite 
+### Sprite 
 ![image](https://user-images.githubusercontent.com/36265028/140660791-58ed6c2f-3220-4114-9da5-bb38c2a15336.png)
 
 
@@ -95,19 +95,19 @@ Sprite
 
 # QRs para las Propinas
 
-Excelente 
+### Excelente 
 ![image](https://user-images.githubusercontent.com/36265028/140660821-b394a9f2-9773-4258-87dd-5b653975673b.png)
 
-Muy bien 
+### Muy bien 
 ![image](https://user-images.githubusercontent.com/36265028/140660827-69f18ff8-f360-4ec5-b458-2572cc24ab5b.png)
 
-Bien 
+### Bien 
 ![image](https://user-images.githubusercontent.com/36265028/140660835-a1fe16e0-1271-430e-b1bb-5ba94a9d2640.png)
 
-Regular 
+### Regular 
 ![image](https://user-images.githubusercontent.com/36265028/140660839-86ec8586-8d5d-4c7e-98cb-fec6ccdd4b53.png)
 
-Malo 
+### Malo 
 ![image](https://user-images.githubusercontent.com/36265028/140660852-99adfe8d-1681-4744-8a3b-3515077ea2b5.png)
 
 
