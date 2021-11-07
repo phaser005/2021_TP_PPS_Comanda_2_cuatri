@@ -18,35 +18,35 @@ Hernan Ruben Vilar
 
 #Tareas
 
-| Codigo Tarea       | Tarea          | Integrante  |
-| ------------- |:-------------:| -----:|
-| A | Alta de dueño / supervisor | Integrante |
-| B | Alta de empleados | Integrante |
-| C | Alta de clientes | Integrante |
-| D | Alta de Mesa | Integrante |
-| E | Alta de productos | Integrante |
-| E | Qr de ingreso al local | Integrante |
-| F | Qr de la mesa | Integrante |
-| G | Qr de propina | Integrante |
-| H | Encuenta Clientes | Integrante |
-| I | Encuenta Empleados | Integrante |
-| J | Encuenta Supervisor | Integrante |
-| K | Agregar un nuevo cliente registrado | Integrante |
-| L | Ingresar al local | Integrante |
-| M | Realizar pedidos (platos y bebidas) | Integrante |
-| N | Confirmar pedidos | Integrante |
-| O | Generar reservas agendadas | Integrante |
-| P | Push Notification / Agregar cliente nuevo | Integrante |
-| Q | Push Notification / Ingreso al local | Integrante |
-| R | Push Notification / Consultar al mozo | Integrante |
-| S | Push Notification / Confirmar pedido (por parte del mozo) | Integrante |
-| T | Push Notification / Confirmar realización del pedido (por parte del cocinero o bartender) | Integrante |
-| U | Push Notification / Generar reservas agendadas / Delivery | Integrante |
-| V | Realizar pedido con GPS o dirección. | Integrante |
-| W | Mapa de ruta hasta el domicilio de entrega. | Integrante |
-| X | Juego 10% de descuento | Integrante |
-| Y | Juego para una bebida gratis | Integrante |
-| Z | Juego para un 20% de descuento | Integrante |
+| Codigo Tarea       | Tarea          | Integrante  | Fecha de Inicio  | Fecha de Finalizacion |
+| ------------- |:-------------:| -----:|-----:|-----:|
+| A | Alta de dueño / supervisor | Integrante | 31/10/2021 | None |
+| B | Alta de empleados | Integrante | 31/10/2021 | None |
+| C | Alta de clientes | Integrante | 31/10/2021 | None |
+| D | Alta de Mesa | Integrante | 31/10/2021 | None |
+| E | Alta de productos | Integrante | 31/10/2021 | None |
+| E | Qr de ingreso al local | Integrante | 31/10/2021 | None |
+| F | Qr de la mesa | Integrante | 31/10/2021 | None |
+| G | Qr de propina | Integrante | 31/10/2021 | None |
+| H | Encuenta Clientes | Integrante | 31/10/2021 | None |
+| I | Encuenta Empleados | Integrante | 31/10/2021 | None |
+| J | Encuenta Supervisor | Integrante | 31/10/2021 | None |
+| K | Agregar un nuevo cliente registrado | Integrante | 31/10/2021 | None |
+| L | Ingresar al local | Integrante | 31/10/2021 | None |
+| M | Realizar pedidos (platos y bebidas) | Integrante | 31/10/2021 | None |
+| N | Confirmar pedidos | Integrante | 31/10/2021 | None |
+| O | Generar reservas agendadas | Integrante | 31/10/2021 | None |
+| P | Push Notification / Agregar cliente nuevo | Integrante | 31/10/2021 | None |
+| Q | Push Notification / Ingreso al local | Integrante | 31/10/2021 | None |
+| R | Push Notification / Consultar al mozo | Integrante | 31/10/2021 | None |
+| S | Push Notification / Confirmar pedido (por parte del mozo) | Integrante | 31/10/2021 | None |
+| T | Push Notification / Confirmar realización del pedido (por parte del cocinero o bartender) | Integrante | 31/10/2021 | None |
+| U | Push Notification / Generar reservas agendadas / Delivery | Integrante | 31/10/2021 | None |
+| V | Realizar pedido con GPS o dirección. | Integrante | 31/10/2021 | None |
+| W | Mapa de ruta hasta el domicilio de entrega. | Integrante | 31/10/2021 | None |
+| X | Juego 10% de descuento | Integrante | 31/10/2021 | None |
+| Y | Juego para una bebida gratis | Integrante | 31/10/2021 | None |
+| Z | Juego para un 20% de descuento | Integrante | 31/10/2021 | None |
 
 # QRs de las Mesas
 ## 1
