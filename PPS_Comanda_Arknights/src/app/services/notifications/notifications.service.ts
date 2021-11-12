@@ -152,7 +152,7 @@ export class NotificationsService {
                     'google.original_priority': 'high',
                     collapse_key: 'pps.comanda.arknights',
                   },
-                  id: '1:506480302106:android:f75a103a6a8215e0d2d9a3',
+                  id: '1:1010949520515:android:24c3a1d0d68393b1b0efb6',
                 },
                 to: '/topics/' + deviceToken
               }).subscribe(doc=>{
