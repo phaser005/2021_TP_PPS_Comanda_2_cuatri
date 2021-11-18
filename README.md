@@ -50,32 +50,33 @@ Hernan Ruben Vilar
 
 # QRs de las Mesas
 ## 1
-![Mesa 1](https://user-images.githubusercontent.com/36265028/142365422-0bfef517-638e-4c57-9430-7387fea3b62b.png)
+![Mesa 1](https://user-images.githubusercontent.com/36265028/142366336-ee1fc0f4-61ad-4a63-9a06-7f6e2483717e.png)
+
 
 
 # QRs de la Lista de Espera 
-![Lista de espera](https://user-images.githubusercontent.com/36265028/142365207-059826d4-8710-42f2-b74c-082f2c91156b.jpg)
+![Lista de espera - b](https://user-images.githubusercontent.com/36265028/142366226-42edbeae-288a-4fa2-8cc6-be810a081c1d.png)
 
 
 # QRs para las Propinas
 
 ### Excelente 
-![Excelente - 20%](https://user-images.githubusercontent.com/36265028/142364939-c4474375-705a-499b-aaf4-bbedac756e44.png)
+![image](https://user-images.githubusercontent.com/36265028/142366410-efb0a298-9813-46ec-9b5c-4b8fe92e8f88.png)
 
 
 ### Muy bien 
-![Muy Bien - 15%](https://user-images.githubusercontent.com/36265028/142364961-85cf8203-dcec-463a-ada9-028b9e5d9043.png)
+![image](https://user-images.githubusercontent.com/36265028/142366514-fa570a35-ef48-496f-a674-8a8e968425ca.png)
 
 
 ### Bien 
-![Bien - 10%](https://user-images.githubusercontent.com/36265028/142364977-2e4a5920-e5e4-4984-90ac-b094eecae71a.png)
+![image](https://user-images.githubusercontent.com/36265028/142366559-619883a3-dd3a-4c47-9554-3dd8d4a66db2.png)
 
 
 ### Regular 
-![Regular - 5%](https://user-images.githubusercontent.com/36265028/142364993-17862fa9-7509-4472-800c-64a2c092dfb7.png)
+![image](https://user-images.githubusercontent.com/36265028/142366602-199b52c1-08e1-4fe5-b236-c772c4cec84c.png)
 
 
 ### Malo 
-![Malo - 0%](https://user-images.githubusercontent.com/36265028/142365004-44c8c431-8f3d-4a1e-88c3-d5ee312cfbf5.png)
+![image](https://user-images.githubusercontent.com/36265028/142366663-fbe58bb0-dfad-4dd1-8dc2-0e51a9abfe0c.png)
 
 
