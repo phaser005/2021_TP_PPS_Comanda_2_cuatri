@@ -1,0 +1,18 @@
+.numeroMesa {
+    background-color: #332920;
+    font-family: Arial, Helvetica, sans-serif;
+    color: snow;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+}
+
+.loading {
+    z-index: 10 !important;
+    width: 150px;
+    height: 150px;
+    position: fixed !important;
+    top: 35%;
+    left: 30%;
+}

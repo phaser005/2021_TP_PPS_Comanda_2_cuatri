@@ -1,0 +1,23 @@
+ion-content.img {
+    position: absolute;
+    height: 15000%;
+    width: 15000%;
+}
+
+.titulo {
+    margin-left: 20%;
+    color: black;
+}
+
+.contenidoTotal {
+    --background: url("../../assets/imagenmia.jpg") 0 0/100% 100% no-repeat !important;
+}
+
+.loading {
+    z-index: 10 !important;
+    width: 150px;
+    height: 150px;
+    position: fixed !important;
+    top: 35%;
+    left: 30%;
+}

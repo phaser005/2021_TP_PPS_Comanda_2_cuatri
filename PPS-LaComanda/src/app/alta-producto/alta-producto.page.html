@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar color="fondo">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/" slot="start" icon="arrow-back-circle"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Alta producto</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+        <img src="../../assets/icon/gifAnimado.gif" class="loading">
+    </div>
+    <ion-card *ngIf='!splash'>
+        <ion-card-header>
+            <div>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col *ngFor='let foto of productoJson.fotos; let i = index;'>
+                            <img *ngIf='foto != null' [src]="foto" width="80px" height="80px" class="icon" (click)="tomarFotografia(i)">
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </ion-card-header>
+        <ion-item>
+            <ion-label>Tipo:</ion-label>
+            <ion-select [(ngModel)]="pickedName" interface="popover" placeholder="Seleccione" (ionChange)="pickerUser(pickedName)">
+                <ion-select-option *ngFor="let producto of listaProductos" value="{{producto.tipo}}">{{producto.tipo}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <form [formGroup]="miFormulario">
+            <ion-item class="labels" fill="outline">
+                <br>
+                <ion-input type="text" [(ngModel)]="productoJson.nombre" formControlName="nombre" placeholder="Nombre"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.nombre">
+                    <div class="error-message" *ngIf="miFormulario.get('nombre').hasError(validation.type) && (miFormulario.get('nombre').dirty || miFormulario.get('nombre').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+            </div>
+            <ion-item class="labels">
+                <br>
+                <ion-input type="text" [(ngModel)]="productoJson.descripcion" formControlName="descripcion" placeholder="Descripción"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.descripcion">
+                    <div class="error-message" *ngIf="miFormulario.get('descripcion').hasError(validation.type) && (miFormulario.get('descripcion').dirty || miFormulario.get('descripcion').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+            </div>
+            <ion-item class="labels">
+                <br>
+                <ion-input type="number" [(ngModel)]="productoJson.tiempo" formControlName="tiempo" placeholder="Tiempo elaboración" min='0' max='9999'></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.tiempo">
+                    <div class="error-message" *ngIf="miFormulario.get('tiempo').hasError(validation.type) && (miFormulario.get('tiempo').dirty || miFormulario.get('tiempo').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+            </div>
+            <ion-item class="labels">
+                <br>
+                <ion-input type="nuumber" [(ngModel)]="productoJson.precio" formControlName="precio" placeholder="Precio" min='0' max='9999'></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.precio">
+                    <div class="error-message" *ngIf="miFormulario.get('precio').hasError(validation.type) && (miFormulario.get('precio').dirty || miFormulario.get('precio').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+            </div>
+        </form>
+        <ion-grid>
+            <ion-button (click)="registrar()" class="btnRegistro" color='cubiertos' [disabled]="!miFormulario.valid" expand="block">Enviar producto</ion-button>
+        </ion-grid>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-content>
+    <ion-card *ngIf='!splash' color='fondo'>
+        <ion-card-header>
+            <div align="center">
+                <img src="../../assets/SVG.svg" alt="" width="150px" height="150px" class="icon">
+            </div>
+            <ion-card-title align="center">Iniciar sesión</ion-card-title>
+        </ion-card-header>
+        <ion-item color='cubiertos'>
+            <ion-label>Usuarios</ion-label>
+            <ion-select [(ngModel)]="pickedName" interface="popover" placeholder="Seleccione Usuario" (ionChange)="pickerUser(pickedName)">
+                <ion-select-option *ngFor="let usuario of listaUsuarios" value="{{usuario.correo}}">{{usuario.correo}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item color='cubiertos'>
+            <ion-label position="stacked">Correo electrónico</ion-label>
+            <ion-input type="text" [(ngModel)]="email" placeholder="Ingrese usuario..."></ion-input>
+        </ion-item>
+        <ion-item color='cubiertos'>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="password" placeholder="Ingrese contraseña..."></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="onSubmitLogin()" class="btn btn-Dark" expand="block">Ingresar</ion-button>
+        <ion-button (click)='loginGoogle()' class='btn btn-Success' color='light' expand='block'>Ingresar con google<ion-icon style='margin-left: 10px;' name="logo-google"></ion-icon>
+        </ion-button>
+        <ion-button (click)="registrarUsuario()" class="btn btn-Secondary" color='success' expand="block">Registrarse</ion-button>
+        <br>
+    </ion-card>
+</ion-content>

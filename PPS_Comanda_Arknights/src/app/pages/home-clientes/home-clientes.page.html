@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Inicio</ion-title>
+    <ion-button color="danger" slot="end" style="margin-right: 1em;" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Salir
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="display:flex; flex-direction: column;">
+    <h1 style="text-align: center;color: var(--ion-color-dark);">¡Bienvenido {{currentUser.nombre}} ! </h1>
+    <div class="qr-item" (click)="ScanQr()">
+      <ion-icon name="qr-code-outline" class="qricon"></ion-icon>
+      <p>{{qrBtnText}}</p>
+    </div>
+    <ion-row>
+      <div class="menu-item" *ngIf="showChatBtn" (click)="goToChat()">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        <p>Consulta al Mozo</p>
+      </div>
+      <div class="menu-item" (click)="navigateCarta()" *ngIf="showCartaBtn">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        <p>Hacer pedido</p>
+      </div>
+      <div class="menu-item" (click)="navigateDetalle()" *ngIf="showDetalleBtn">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        <p>Detalle pedido</p>
+      </div>
+      <div class="menu-item" *ngIf="showGamesBtn" (click)="goToGame()">
+        <ion-icon name="game-controller-outline"></ion-icon>
+        <p>Juegos</p>
+      </div>
+      <div class="menu-item" *ngIf="showEncuestaBtn" (click)="goToEncuesta()">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <p>Encuesta</p>
+      </div>
+      <div class="menu-item" *ngIf="showStatsBtn" (click)="goToEstadisticas()">
+        <ion-icon name="stats-chart-outline"></ion-icon>
+        <p>Estadísticas</p>
+      </div>
+    </ion-row>
+  </div>
+</ion-content>
+<!-- Spinner -->
+<ngx-spinner
+type=null
+template="<img src='assets/spinner_buho.gif' height='125'/>"
+><p style="color: white" > Cargando... </p></ngx-spinner>

@@ -1,0 +1,186 @@
+<ion-header>
+    <ion-toolbar color="fondo">
+        <ion-back-button defaultHref="/" slot="start" icon="arrow-back-circle"></ion-back-button>
+        <h3 class="titulo">Lista pedidos</h3>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card class="todoCompleto" *ngIf="variabledesplegarPedido == true">
+        <ion-item class="labels" color="transparent" style="background-color: transparent !important;">
+            <ion-label size='large' position="stacked" style="color: snow;">INFORMACION DEL PEDIDO:</ion-label>
+            <br>
+            <div *ngIf="pedidoEnFormatoJSON != null">
+                <p style="color: snow;">Su pedido son los siguientes platos:</p>
+                <div style="background-color: var(--ion-color-fondo); border-radius: 10px; padding: 5px;  margin: 5px;" *ngFor='let producto of pedidoEnFormatoJSON.productos'>
+                    <small>nombre: {{producto.nombre}}</small> <br>
+                    <small>cantidad: {{producto.cantidad}}</small> <br>
+                    <small>precio: ${{producto.precio}}</small>
+                </div>
+                <p class="alineacion-derecha-platito"> Precio total:
+                    <span class="precio"> ${{pedidoEnFormatoJSON.precioTotal}}</span>
+                </p>
+                <p class="alineacion-derecha-platito"> Tiempo total:
+                    <span class="precio"> {{pedidoEnFormatoJSON.tiempoTotal}} segundos</span>
+                </p>
+            </div>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-button (click)="confirmarPedido()" color="success" expand="block">Confirmar</ion-button>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-button (click)=" cancelarPedido()" color="warning" expand="block">Cancelar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-card-content>
+            <ion-button (click)="desplegarInversoPedido()" expand="block" color="danger">Cerrar</ion-button>
+        </ion-card-content>
+    </ion-card>
+    <ion-card style="background: snow" (click)="divMostrarPlatoPrincipal()">
+        <ion-card-content>
+            <p class="alineacion-derecha">
+                <ion-icon name="pizza-outline"></ion-icon> PLATOS PRINCIPALES <span class="precio">Cantidad pedida: {{contadorPlatos}}</span>
+            </p>
+        </ion-card-content>
+    </ion-card>
+    <div *ngFor="let producto of listaProductosTipoPlato">
+        <ion-card style="background-color: rgba(0, 0, 0, 0.568);" *ngIf="mostrarPlatoPrincipal == true">
+            <ion-card-content align="center" style="font-size: 20px;color: white; background-color: black;">
+                <p class="alineacion-derecha-platito">{{producto.nombre}}
+                    <span class="tiempo"> precio : {{producto.precio}}</span>
+                </p>
+            </ion-card-content>
+            <ion-item color="transparent" style="background-color: transparent !important; color: transparent;">
+                <ion-slides pager="true">
+                    <ion-slide>
+                        <img [src]="producto.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="producto.fotos[1]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="producto.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                </ion-slides>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-button (click)="cargarJSONPedidosPlatos(producto)" expand="block" color="success">
+                                <ion-icon name="add-circle-outline"></ion-icon>Agregar
+                            </ion-button>
+                        </ion-col>
+                        <ion-col col-6>
+                            <ion-button (click)="removerJSONPedidosPlatos(producto)" expand="block" color="danger">
+                                <ion-icon name="remove-circle-outline"></ion-icon>Eliminar
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-label>
+                    <h1>{{producto.nombre}} = {{contadorPlatos}}</h1>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+    </div>
+    <ion-card style="background: snow" (click)="divMostrarBebida()">
+        <ion-card-content>
+            <p class="alineacion-derecha">
+                <ion-icon name="wine-outline"></ion-icon>BEBIDAS <span class="precio">Cantidad pedida: {{contadorBebidas}}</span>
+            </p>
+        </ion-card-content>
+    </ion-card>
+    <div *ngFor="let bebida of listaProductosTipoBebida">
+        <ion-card style="background-color: rgba(0, 0, 0, 0.568);" *ngIf="mostrarBebida == true">
+            <ion-card-content align="center" style="font-size: 20px;color: white; background-color: black;">
+                <p class="alineacion-derecha-platito">{{bebida.nombre}}
+                    <span class="tiempo">precio :{{bebida.precio}}</span>
+                </p>
+                <div style="font-size: 20px;color: white;">
+                </div>
+            </ion-card-content>
+            <ion-item color="transparent" style="background-color: transparent !important; color: transparent;">
+                <ion-slides pager="true">
+                    <ion-slide>
+                        <img [src]="bebida.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="bebida.fotos[1]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="bebida.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                </ion-slides>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-button (click)="cargarJSONPedidosPlatos(bebida)" expand="block" color="success">
+                                <ion-icon name="add-circle-outline"></ion-icon>Agregar
+                            </ion-button>
+                        </ion-col>
+                        <ion-col col-6>
+                            <ion-button (click)="removerJSONPedidosPlatos(bebida)" expand="block" color="danger">
+                                <ion-icon name="remove-circle-outline"></ion-icon>Eliminar
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-label>
+                    <h1>{{bebida.nombre}} = {{contadorBebidas}}</h1>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+    </div>
+    <ion-card style="background: snow" (click)="divMostrarPostre()">
+        <ion-card-content>
+            <p class="alineacion-derecha">
+                <ion-icon name="ice-cream-outline"></ion-icon>POSTRES <span class="precio">Cantidad pedida: {{contadorPostres}}</span>
+            </p>
+        </ion-card-content>
+    </ion-card>
+    <div *ngFor="let postre of listaProductosTipoPostre">
+        <ion-card style="background-color: rgba(0, 0, 0, 0.568);" *ngIf="mostrarPostre == true">
+            <ion-card-content align="center" style="font-size: 20px;color: white; background-color: black;">
+                <p class="alineacion-derecha-platito">{{postre.nombre}}
+                    <span class="tiempo">precio : {{postre.precio}}</span>
+                </p>
+            </ion-card-content>
+            <ion-item color="transparent" style="background-color: transparent !important; color: transparent;">
+                <ion-slides pager="true">
+                    <ion-slide>
+                        <img [src]="postre.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="postre.fotos[1]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                    <ion-slide>
+                        <img [src]="postre.fotos[2]" style=" height: 90%; width: 90%">
+                    </ion-slide>
+                </ion-slides>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-button (click)="cargarJSONPedidosPlatos(postre)" expand="block" color="success">
+                                <ion-icon name="add-circle-outline"></ion-icon>Agregar
+                            </ion-button>
+                        </ion-col>
+                        <ion-col col-6>
+                            <ion-button (click)="removerJSONPedidosPlatos(postre)" expand="block" color="danger">
+                                <ion-icon name="remove-circle-outline"></ion-icon>Eliminar
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-label>
+                    <h1>{{postre.nombre}} = {{contadorPostres}}</h1>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-button (click)="desplegarPedido()" color="success" expand="block">CONFIRMAR PEDIDO</ion-button>
+    <ion-item color="danger" expand="block">TIEMPO TOTAL - Aprox: {{pedidoEnFormatoJSON.tiempoTotal}} seg</ion-item>
+    <ion-item color="success" expand="block">PRECIO TOTAL: ${{pedidoEnFormatoJSON.precioTotal}}</ion-item>
+</ion-footer>

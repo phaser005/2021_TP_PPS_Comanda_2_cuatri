@@ -1,0 +1,8 @@
+{
+  "name": "PPS-LaComanda",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

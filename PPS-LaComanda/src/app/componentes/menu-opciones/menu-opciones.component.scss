@@ -1,0 +1,16 @@
+.menu-content {
+    --background: var(--ion-color-fondo);
+    --ion-text-color: var(--ion-color-fondo-contrast);
+}
+
+.menu-content-list {
+    --ion-background-color: transparent !important;
+}
+
+.menu-content-item {
+    --background: transparent !important;
+}
+
+.menu-content-item p {
+    color: black;
+}

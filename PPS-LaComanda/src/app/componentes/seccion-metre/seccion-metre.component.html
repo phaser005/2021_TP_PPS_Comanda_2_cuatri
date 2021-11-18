@@ -1,0 +1,30 @@
+<ng-container *ngIf='!splash'>
+    <ion-card class="numeroMesa">
+        <ion-card-content>
+            <h4 style="color:rgb(240, 240, 240); font-size: 20px;text-align: center;">Lista de espera </h4>
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngFor="let item of listaEspera" style="background-color:  #332920cb; border-radius: 15px;">
+        <div>
+            <ion-item color="transparent" style="background: transparent;">
+                <ion-label>
+                    <p style="color:rgb(240, 240, 240); font-size: 15px">Tipo de Mesa:
+                        <span style="font-size: 15px; color: chocolate;"> {{item.tipo}}</span>
+                    </p> <br>
+                    <p style="color:rgb(240, 240, 240); font-size: 15px;">Nombre:
+                        <span style="font-size: 15px; color: chocolate;"> {{item.nombre}}</span>
+                    </p> <br>
+                    <p style="color:rgb(240, 240, 240); font-size: 15px;">Cantidad de Comensales:
+                        <span style="font-size: 15px; color: chocolate;"> {{item.comensales}}</span>
+                    </p>
+                </ion-label>
+            </ion-item>
+            <ion-card-content>
+                <ion-button color="success" (click)="comprobarMesas(item)" expand="block" color="light">Asignar mesa</ion-button>
+            </ion-card-content>
+        </div>
+    </ion-card>
+</ng-container>
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <img src="../../assets/icon/gifAnimado.gif" class="loading">
+</div>

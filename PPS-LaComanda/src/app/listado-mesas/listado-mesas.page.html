@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color='fondo'>
+        <ion-back-button defaultHref="/" slot="start" icon="arrow-back-circle"></ion-back-button>
+        <ion-title>Mesas disponibles</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+        <img src="../../assets/icon/gifAnimado.gif" class="loading">
+    </div>
+    <ng-container *ngIf='!splash'>
+        <div *ngFor="let mesita of listadoMesas">
+            <ion-card style="background-color: #332920ea;">
+                <ion-card-content>
+                    <ion-item color="transparent" style="background: transparent;">
+                        <ion-avatar slot="end">
+                            <img src="../../assets/icon/mesa.png">
+                        </ion-avatar>
+                        <ion-label>
+                            <p style="color:rgb(240, 240, 240); font-size: 15px"> Numero de mesa:
+                                <span style="font-size: 15px; color: #f0f666;"> {{mesita.numero}}</span>
+                            </p> <br>
+                            <p style="color:rgb(240, 240, 240); font-size: 15px;">Tipo de mesa :
+                                <span style="font-size: 15px; color: #f0f666;"> {{mesita.tipo}}</span>
+                            </p> <br>
+                            <p style="color:rgb(240, 240, 240); font-size: 15px;">Capacidad :
+                                <span style="font-size: 15px; color: #f0f666;"> {{mesita.comensales}}</span>
+                            </p> <br>
+                            <p style="color:rgb(240, 240, 240); font-size: 15px;">Estado de mesa :
+                                <span style="font-size: 15px; color: #f0f666;"> {{mesita.estado}}</span>
+                            </p>
+                        </ion-label>
+                    </ion-item>
+                </ion-card-content>
+                <ion-button [disabled]='mesita.estado !== "Libre"' (click)="asignarMesa(mesita)" expand="block" color="primary">Asignar esta mesa</ion-button>
+            </ion-card>
+        </div>
+    </ng-container>
+</ion-content>
+<ion-footer *ngIf='item.comensales !== null || item.tipo !== null'>
+    <ion-item *ngIf='item.comensales !== null' color='fondo'>
+        <small> Comensales: {{item.comensales}}</small>
+    </ion-item>
+    <ion-item *ngIf='item.tipo !== null' color='fondo'>
+        <small> Tipo de mesa: {{item.tipo}}</small>
+    </ion-item>
+</ion-footer>

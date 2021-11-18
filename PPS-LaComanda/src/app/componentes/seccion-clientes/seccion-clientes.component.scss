@@ -1,0 +1,94 @@
+.numeroMesa {
+    background-color: #332920;
+    font-family: Arial, Helvetica, sans-serif;
+    color: snow;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+}
+
+.todoCompleto {
+    width: 300px;
+    height: 150px;
+    top: 35%;
+    left: 7%;
+    background-color: #ffffff;
+}
+
+.alineacion-derecha {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.precio {
+    text-align: center;
+    color: green;
+    display: inline;
+}
+
+.tiempo {
+    text-align: center;
+    color: red;
+    display: inline;
+}
+
+// A PARTIR DE ACÁ, ES DEL CSS DEL TICKET.
+
+.ticket {
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    height: 450px;
+    margin: 50px auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: #FBFBFB;
+    box-shadow: 2px 2px 15px 0px #AB9B0D;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        height: 6px;
+        width: 290px;
+    }
+
+    &:before {
+        top: -5px;
+        background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100%) -7px -8px / 16px 16px repeat-x,
+    }
+
+    &:after {
+        bottom: -5px;
+        background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100%) -7px -2px / 16px 16px repeat-x,
+    }
+}
+
+.ticket__content {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 6px solid #D8D8D8;
+}
+
+.ticket__text {
+    width: 400px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #C6DEDE;
+    transform: translate(-25px, 25px) rotate(-55deg);
+}
+
+.loading {
+    z-index: 10 !important;
+    width: 150px;
+    height: 150px;
+    position: fixed !important;
+    top: 35%;
+    left: 30%;
+}

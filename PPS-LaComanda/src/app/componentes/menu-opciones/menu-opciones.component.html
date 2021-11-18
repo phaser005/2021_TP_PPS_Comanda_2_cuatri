@@ -1,0 +1,62 @@
+<ion-menu backdrop='0.7' side="start" menuId="mainmenu" contentId="main" class='menu'>
+    <ion-content id='main' class='menu-content'>
+        <ion-list class='menu-content-list' align="center">
+            <ion-item class='menu-content-item'>
+                <img [src]="usuario.foto " style=" height: 50%; width: 30%; ">
+                <ion-label>
+                    <ng-container *ngIf='usuario.perfil === "Anonimo"'>
+                        <h2>Nombre :</h2>
+                        <p>{{usuario.nombre}}</p>
+                    </ng-container>
+                    <ng-container *ngIf='usuario.perfil !== "Anonimo"'>
+                        <h2>Correo :</h2>
+                        <p>{{usuario.correo}}</p>
+                    </ng-container>
+                    <h2>Perfil : </h2>
+                    <p> {{usuario.perfil}}</p>
+                </ion-label>
+            </ion-item>
+            <br>
+            <ng-container *ngIf="usuario.perfil == 'Dueño' || usuario.perfil == 'Supervisor'">
+                <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-supervisor" align="center" expand="block" color="cubiertos" shape="round">Registrar Dueño/Supervisor</ion-button>
+                <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-empleado" align="center" expand="block" color="cubiertos" shape="round">Registrar Empleado</ion-button>
+                <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-mesa" align="center" expand="block" color="cubiertos" shape="round">Registrar Mesa</ion-button>
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarClientesNuevos')" align="center" expand="block" color="cubiertos" shape="round">Ver Clientes Nuevos</ion-button>
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarReservasNuevas')" align="center" expand="block" color="cubiertos" shape="round">Ver reservas nuevas</ion-button>
+            </ng-container>
+            <ng-container *ngIf="usuario.perfil == 'Metre'">
+                <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-cliente" align="center" expand="block" color="cubiertos" shape="round">Registrar Cliente</ion-button>
+            </ng-container>
+            <ng-container *ngIf="usuario.perfil == 'Cliente' || usuario.perfil == 'Anonimo'">
+                <ion-button *ngIf="usuario.perfil == 'Cliente' && nivelFlagMenu == 0" (click)="menu.close('mainmenu')" routerLink="/alta-reserva" expand="block" color="cubiertos" shape="round">Hacer reserva</ion-button>
+                <ion-button *ngIf="nivelFlagMenu >= 1" (click)="menu.close('mainmenu'); solicitarFunc('qrMesa')" expand="block" color="cubiertos" shape="round">QR Mesa</ion-button>
+                <ion-button *ngIf="nivelFlagMenu >= 2" (click)="menu.close('mainmenu'); solicitarFunc('botonMostrarConsulta')" expand="block" color="cubiertos" shape="round">Consulta</ion-button>
+                <ion-button *ngIf="nivelFlagMenu >= 2" (click)="menu.close('mainmenu'); solicitarFunc('mostrarProductos')" expand="block" color="cubiertos" shape="round">Lista de Productos</ion-button>
+                <ion-button *ngIf="nivelFlagMenu == 3" (click)="menu.close('mainmenu'); solicitarFunc('confirmarRecepcionPedido')" expand="block" color="cubiertos" shape="round">Confirmar Recepcion de pedido</ion-button>
+                <ion-button *ngIf="nivelFlagMenu >= 4" (click)="menu.close('mainmenu'); solicitarFunc('mostrarEncuestaLista')" expand="block" color="cubiertos" shape="round">Realizar Encuesta</ion-button>
+                <ion-button *ngIf="nivelFlagMenu == 4" (click)="menu.close('mainmenu'); solicitarFunc('mostrarJuegos')" expand="block" color="cubiertos" shape="round">Juegos</ion-button>
+                <ion-button *ngIf="nivelFlagMenu == 4" (click)="menu.close('mainmenu'); solicitarFunc('mostrarCuentaLista')" expand="block" color="cubiertos" shape="round">Pedir cuenta</ion-button>
+            </ng-container>
+            <ng-container *ngIf="usuario.perfil == 'Mozo'">
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarConsultas')" align="center" expand="block" color="cubiertos" shape="round">Consultas
+                </ion-button>
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarPedidosPendientes')" align="center" expand="block" color="cubiertos" shape="round">Pedidos pendientes
+                </ion-button>
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarPedidosPreparados')" align="center" expand="block" color="cubiertos" shape="round">Pedidos Preparados
+                </ion-button>
+                <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarPedidosPagados')" align="center" expand="block" color="cubiertos" shape="round">Pedidos pagados
+                </ion-button>
+            </ng-container>
+            <ng-container *ngIf="usuario.perfil == 'Cocinero' || usuario.perfil == 'BarTender'">
+                <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-producto" align="center" expand="block" color="cubiertos" shape="round">Agregar Producto</ion-button>
+            </ng-container>
+        </ion-list>
+    </ion-content>
+    <ion-item color='cubiertos' (click)="menu.close('mainmenu'); solicitarFunc('cerrarSesion')">
+        <ion-buttons slot="start">
+            <ion-menu-button menu="mainmenu"></ion-menu-button>
+            Cerrar Sesión
+        </ion-buttons>
+        <ion-label></ion-label>
+    </ion-item>
+</ion-menu>

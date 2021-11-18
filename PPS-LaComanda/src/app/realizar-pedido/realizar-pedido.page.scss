@@ -1,0 +1,55 @@
+.todoCompleto{
+    z-index: 9999999 !important;
+    width: 80%;
+    position: absolute !important;
+    top: 0;
+    left: 7%;
+    background-color: rgba(0, 0, 0, 0.877);
+  }
+
+ion-content{
+   --background:url("../../assets/img/fondoLogin2.png") 0 0/100% 100% no-repeat ;
+}
+
+ion-footer{
+  background: black; 
+}
+
+  h4.precioNombre
+{
+  display:inline;
+}
+
+h4.precio
+{
+  color: green;
+  display:inline;
+}
+
+.alineacion-derecha{
+  font-size: 15px;
+  color:#332920; 
+  text-align: left;
+}
+
+.alineacion-derecha-platito{
+  font-size: 20px;
+  color: snow; 
+  text-align: left;
+}
+
+.precio
+{
+  text-align: right;
+  color: green;
+  display:inline;
+  float: right;
+}
+
+.tiempo
+{
+  text-align: center;
+  color: orangered;
+  display:inline;
+  float: right;
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Panel de acciones</ion-title>
+    <!-- <ion-icon class="logout-icon" slot="end" name="log-out-outline" size="large" (click)="logout()"></ion-icon> -->
+    <ion-button color="danger" slot="end" style="margin-right: 1em;" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Salir
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="hero">
+    <img src="../../../../assets/images/buho.svg" alt="">
+  </div>
+  <div class="options">
+    <ion-row>
+      <div class="menu-item" [routerLink]="['/supervisor/users']">
+        <ion-icon name="construct-outline"></ion-icon>
+        <p>Gestionar usuarios</p>
+      </div>
+      <div class="menu-item" [routerLink]="['/supervisor/clientes']">
+        <ion-icon name="people-outline"></ion-icon>
+        <p>Administrar clientes</p>
+      </div>
+    </ion-row> 
+    <ion-row>
+      <div class="menu-item" [routerLink]="['/altamesas']">
+        <ion-icon name="cafe-outline"></ion-icon>
+        <p>Mesas</p>
+      </div>
+      <div class="menu-item" [routerLink]="['/estadisticas']">
+        <ion-icon name="stats-chart-outline"></ion-icon>
+        <p>Estadísticas</p>
+      </div>
+    </ion-row>
+  </div>
+</ion-content>

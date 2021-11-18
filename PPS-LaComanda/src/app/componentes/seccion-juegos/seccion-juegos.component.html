@@ -1,0 +1,13 @@
+<ion-card align='center'>
+    <ion-select placeholder='elige el tipo de beneficio' [value]='flagJuego' (ionChange)='flagJuego = $event.detail.value'>
+        <ion-select-option [value]='"Descuento 10%"'> Descuento 10% </ion-select-option>
+        <ion-select-option [value]='"Bebida Gratis"'> Bebida Gratis </ion-select-option>
+        <ion-select-option [value]='"Postre Gratis"'> Postre Gratis </ion-select-option>
+    </ion-select>
+    <br>
+    <div #coin id='coin' (click)='jugarLanzarMoneda()'>
+        <div class="side-a"></div>
+        <div class="side-b"></div>
+    </div>
+    <h1 align="center">Hacé click en la moneda para jugar</h1>
+</ion-card>

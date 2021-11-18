@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-back-button (click)="navigateBack()" slot="start"></ion-back-button>
+    <ion-title>Carta</ion-title>
+    <ion-icon slot="end" name="qr-code-outline" (click)="ScanQr()" style="font-size: 2em; margin-right: 0.5em;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="showCarta">
+    <ion-list>
+      <ion-item *ngFor="let item of productos; let index=index" >
+        <ion-avatar (click)="openModal(item)">
+          <img [src]="item.img_src">
+        </ion-avatar>
+        <ion-label (click)="openModal(item)">
+          <h1>{{item.nombre}}</h1>
+          <ion-row>
+            <h2>${{item.precio}}</h2>
+            <h2 style="margin-left:1em"><ion-icon name="timer-outline"></ion-icon>{{item.tiempo_elaboracion}} min</h2>
+          </ion-row>
+        </ion-label>
+        <ion-icon name="remove-outline"(click)="RemoveProducto(item.nombre,index)" class="remove"></ion-icon>
+        <strong>{{item.cantidad}}</strong>
+        <ion-icon name="add-outline" (click)="AddProducto(index)" class="add"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <ion-row class="footer">
+      <ion-col size="6" class="details">
+        <strong>Total ${{total}}</strong>
+        <strong><ion-icon name="timer-outline"></ion-icon> {{demoraEstimada}} min</strong>
+      </ion-col>
+      <ion-col size="6" class="submit">
+        <ion-button size="large" color="success" (click)="EnviarPedido()">
+          Confirmar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="showOK" class="ok">
+    <p class="title">¡Recibimos tu pedido!</p>
+    <img src="../../../assets/images/okay.svg" alt="">
+    <p class="sub">Mientras esperas podes obtener un decuento ingresando a "Juegos"</p>
+  </div>
+</ion-content>
+
+<!-- Spinner -->
+<ngx-spinner
+type=null
+template="<img src='assets/spinner_buho.gif' height='125'/>"
+><p style="color: white" > Cargando... </p></ngx-spinner>

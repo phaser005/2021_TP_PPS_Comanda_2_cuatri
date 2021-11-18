@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010949520515",
+    "project_id": "comanda2021-986b7",
+    "storage_bucket": "comanda2021-986b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010949520515:android:24c3a1d0d68393b1b0efb6",
+        "android_client_info": {
+          "package_name": "pps.comanda.arknights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010949520515-e9lagunb0pu6ogpa5op42te8ki04hvdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ3YAyOcbdc0chqgN14ZQ49BTXuNSczlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010949520515-e9lagunb0pu6ogpa5op42te8ki04hvdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

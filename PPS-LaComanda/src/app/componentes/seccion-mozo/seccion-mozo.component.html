@@ -1,0 +1,46 @@
+<ng-container *ngIf='!splash'>
+    <div *ngIf="flagSecc === 'Consultas'">
+        <ng-container *ngFor="let consulta of listaConsultas">
+            <ion-card style="background-color: #332920ea;">
+                <ion-card-content style="color: #ffffff;">{{consulta.fecha | date:"short"}}: El cliente {{consulta.cliente}} de la mesa {{consulta.mesa}} realizo la siguiente consulta:</ion-card-content>
+                <ion-card-content style="color: #ffffff;">{{consulta.descripcion}}</ion-card-content>
+                <ion-input type="text" style="color: #ffffff;" [(ngModel)]="respuestaConsulta" placeholder="Respuesta"></ion-input>
+                <ion-button expand="block" (click)="consultaConExito(consulta)">Responder Consulta</ion-button>
+            </ion-card>
+        </ng-container>
+    </div>
+    <div *ngIf="flagSecc === 'Pedidos'">
+        <ng-container *ngFor="let pedido of listaPedidos">
+            <ion-card *ngIf="pedido.estado === estadoPedido" style="background-color: #332920ea;">
+                <ion-card-content style="color: #ffffff;">
+                    <p *ngIf="pedido.estado === 'Pendiente'">El pedido #{{pedido.id}} esta pendiente</p>
+                    <p *ngIf="pedido.estado === 'Preparado'">El pedido #{{pedido.id}} esta preparado</p>
+                    <p *ngIf="pedido.estado === 'Pagado'">El pedido #{{pedido.id}} fue pagado.</p>
+                    <br>
+                    <div style='padding: 5px; margin: 5px; border: solid white 1px; border-radius: 10px; ' *ngFor="let producto of pedido.productos">
+                        <small>nombre: {{producto.nombre}}</small> <br>
+                        <small>cantidad: {{producto.cantidad}}</small> <br>
+                        <small>precio: {{producto.precio}}</small> <br>
+                    </div>
+                    <h4>Tiempo total: {{pedido.tiempoTotal}}</h4>
+                    <h4>Precio total: {{pedido.precioTotal}}</h4>
+                </ion-card-content>
+                <ion-grid *ngIf="pedido.estado === 'Pendiente'">
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-button (click)="modificarEstadoPedido(pedido,'EnPreparacion')" expand="block" color="success">Confirmar</ion-button>
+                        </ion-col>
+                        <ion-col col-6>
+                            <ion-button (click)="modificarEstadoPedido(pedido,'Cancelado')" expand="block" color="danger">Cancelar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-button *ngIf="pedido.estado === 'Preparado'" expand="block" color="success" (click)="modificarEstadoPedido(pedido,'Servido-A')">Llevar a la mesa</ion-button>
+                <ion-button *ngIf="pedido.estado === 'Pagado'" expand="block" color="success" (click)="liberarMesa(pedido)">Confirmar y Liberar mesa</ion-button>
+            </ion-card>
+        </ng-container>
+    </div>
+</ng-container>
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <img src="../../assets/icon/gifAnimado.gif" class="loading">
+</div>

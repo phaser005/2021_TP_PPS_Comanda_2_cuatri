@@ -1,0 +1,93 @@
+<ng-container *ngIf='!splash'>
+    <ion-card *ngIf='usuario.perfil === "Cliente" || usuario.perfil === "Anonimo"' style="background-color:  #332920cb; border-radius: 20px;">
+        <form *ngIf='flagEncuesta; else realizada' #ngForm='ngForm' [formGroup]='encuestaCliente'>
+            <h2 align="center" style="color: #ffffff;">Encuesta</h2>
+            <div *ngIf="contadorInterno != 2">
+                <div style="margin: 1rem; position: relative; align-content: center;">
+                    <ion-fab-button style="margin-left: 42%;" color="primary" color="light" horizontal="center" vertical="top" (click)="manejadorEncuesta()">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </ion-fab-button>
+                </div>
+            </div>
+            <ion-slides pager="true">
+                <ion-slide>
+                    <img [src]="jsonEncuesta.fotos[0]" style=" height: 45%; width: 45%">
+                </ion-slide>
+                <ion-slide>
+                    <img [src]="jsonEncuesta.fotos[1]" style=" height: 45%; width: 45%">
+                </ion-slide>
+                <ion-slide>
+                    <img [src]="jsonEncuesta.fotos[2]" style=" height: 45%; width: 45%">
+                </ion-slide>
+            </ion-slides>
+            <br>
+            <ion-card-content>
+                <div style="color: #ffffff;" align="center">¿Qué le parecio nuesta app?</div>
+                <div align="center">
+                    <span *ngIf="gradoSatisfaccion ==1" style="margin-left:10px;color: #ffffff;">Muy mala <span style="font-size: 150%;">😠</span></span>
+                    <span *ngIf="gradoSatisfaccion==2 " style="margin-left:10px;color: #ffffff;">Mala <span style="font-size: 150%;">😡</span></span>
+                    <span *ngIf="gradoSatisfaccion ==3" style="margin-left:10px;color: #ffffff;">Regular <span style="font-size: 150%;">😐</span></span>
+                    <span *ngIf="gradoSatisfaccion==4 " style="margin-left:10px;color: #ffffff;">Buena <span style="font-size: 150%;">🙂</span></span>
+                    <span *ngIf="gradoSatisfaccion == 5" style="margin-left:10px;color: #ffffff;">Muy buena <span style="font-size: 150%;">😊</span></span>
+                </div>
+                <ion-item color="transparent" align="center">
+                    <ion-range (ionChange)="cambioRango($event)" min="1" max="5" pin="true" color="light"></ion-range>
+                </ion-item>
+                <div class="error-message" *ngIf="encuestaCliente.get('calificacion_app').errors && (encuestaCliente.get('calificacion_app').dirty || encuestaCliente.get('calificacion_app').touched)">
+                    Campo requerido. completar</div>
+            </ion-card-content>
+            <ion-card-content>
+                <div style="color: #ffffff;" align="center">¿Que le parecio el servicio del restaurante?</div>
+                <ion-item color="transparent" align="center">
+                    <ion-select placeholder='elige una calificacion para el restaurante' formControlName='calificacion_restaurante' (ionChange)='califRest($event)'>
+                        <ion-select-option *ngFor='let valor of califRestaurante' [value]='valor.puntaje'>{{valor.texto}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <div class="error-message" *ngIf="encuestaCliente.get('calificacion_restaurante').errors && (encuestaCliente.get('calificacion_restaurante').dirty || encuestaCliente.get('calificacion_restaurante').touched)">Campo requerido. completar</div>
+            </ion-card-content>
+            <ion-card-content>
+                <div style="color: #ffffff;" align="center">¿Dejaste/vas a dejar propina por tu pedido?</div>
+                <ion-item color="transparent" align="center">
+                    <ion-checkbox formControlName='propina' color="primary"></ion-checkbox>
+                </ion-item>
+            </ion-card-content>
+            <ion-card-content>
+                <div style="color: #ffffff;" align="center">¿Participaste/vas a participar en los juegos para obtener beneficios?</div>
+                <ion-radio-group formControlName='participacion_juegos' value='encuestaCliente.value.participacion_juegos'>
+                    <ion-item color="transparent">
+                        <ion-label>Si</ion-label>
+                        <ion-radio [value]='true'></ion-radio>
+                    </ion-item>
+                    <ion-item color="transparent">
+                        <ion-label>No</ion-label>
+                        <ion-radio [value]='false'></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+            </ion-card-content>
+            <ion-card-content>
+                <div style="color: #ffffff;" align="center">¿Tenés alguna recomendacion extra para dar?</div>
+                <ion-item color="transparent">
+                    <ion-input type='text' formControlName='recomendaciones'></ion-input>
+                </ion-item>
+            </ion-card-content>
+        </form>
+        <ng-template #realizada>
+            <div align="center">Ya se ha realizado la encuesta</div>
+        </ng-template>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <div>
+                        <ion-button [disabled]='contadorInterno != 2' (click)="enviarEncuesta()" expand="block" color="success">Enviar</ion-button>
+                    </div>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-button routerLink='/encuestas' expand="block" color="warning">Estadísticas</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</ng-container>
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <img src="../../assets/icon/gifAnimado.gif" class="loading">
+</div>

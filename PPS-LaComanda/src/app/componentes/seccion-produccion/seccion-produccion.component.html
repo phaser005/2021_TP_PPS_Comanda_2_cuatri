@@ -1,0 +1,29 @@
+<ng-container *ngIf='!splash'>
+    <ion-card class="numeroMesa">
+        <ion-card-content>
+            <h4 style="color:rgb(240, 240, 240); font-size: 20px;text-align: center;">Pedidos a elaborar</h4>
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngFor="let pedido of listaPedidos" style="background-color:  #332920cb; border-radius: 20px;">
+        <ion-card-content style="color: snow;">
+            <div>
+                ID Pedido: #{{pedido.id}}
+                <br>
+                Pedidos:
+            </div>
+            <ng-container *ngFor="let producto of pedido.productos">
+                <div *ngIf='!producto.estado' style='padding: 5px; margin: 5px; border: solid white 1px; border-radius: 10px;'>
+                    <small>nombre: {{producto.nombre}}</small> <br>
+                    <small>cantidad: {{producto.cantidad}}</small> <br>
+                    <small>precio: {{producto.precio}}</small> <br>
+                </div>
+            </ng-container>
+            <div *ngIf="pedido.estado == 'EnPreparacion'">
+                <ion-button color="success" (click)="elaborarPedido(pedido)" expand="block">Elaborar</ion-button>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ng-container>
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <img src="../../assets/icon/gifAnimado.gif" class="loading">
+</div>

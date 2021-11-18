@@ -1,0 +1,33 @@
+<div class="ion-page" id="maincontent">
+    <ion-header>
+        <ion-toolbar color="fondo">
+            <ion-buttons slot="start">
+                <ion-menu-button menu="mainmenu"></ion-menu-button>
+            </ion-buttons>
+            <ion-buttons slot="end" style='margin-right: 10px;'>
+                <ion-icon [name]="complemento.flagSonidos ? 'volume-high-outline':'volume-mute-outline'" (click)='complemento.toggleSonidos()'></ion-icon>
+            </ion-buttons>
+            <h3 class="titulo">!BIENVENIDOS!</h3>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content *ngIf='infoUsuario !== undefined; else splashA' class="contenidoTotal">
+        <ng-container *ngIf='!splash'>
+            <menu-opciones [usuario]='infoUsuario' [flagMenu]='flagMenu' (flagFunc)='ejecutarFunc($event)'></menu-opciones>
+            <div *ngIf="infoUsuario.perfil == 'Mozo'">
+                <seccion-mozo [usuario]='infoUsuario' [flagFunc]='flagFunc' [listaPedidos]='listaPedidos' [listaConsultas]='listaConsultas'></seccion-mozo>
+            </div>
+            <div *ngIf="infoUsuario.perfil == 'Dueño' || infoUsuario.perfil == 'Supervisor'">
+                <seccion-duenios [listaUsuarios]='listaUsuarios' [flagFunc]='flagFunc' [listaReservas]='listaReservas'></seccion-duenios>
+            </div>
+            <div *ngIf="infoUsuario.perfil == 'Metre'">
+                <seccion-metre [listaEspera]='listaEspera'></seccion-metre>
+            </div>
+            <div *ngIf="infoUsuario.perfil === 'Anonimo' || infoUsuario.perfil === 'Cliente'">
+                <seccion-clientes [usuario]='infoUsuario' [listaConsultas]='listaConsultas' [listaProductos]='listaProductos' [flagFunc]='flagFunc' [numMesa]='numMesa' (flagMenu)='flagMenu = $event'></seccion-clientes>
+            </div>
+            <div *ngIf="infoUsuario.perfil == 'Cocinero' || infoUsuario.perfil == 'BarTender'">
+                <seccion-produccion [usuario]='infoUsuario' [listaPedidos]='listaPedidos'></seccion-produccion>
+            </div>
+        </ng-container>
+    </ion-content>
+</div>

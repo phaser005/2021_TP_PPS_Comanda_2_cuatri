@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar color="fondo">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/" slot="start" icon="arrow-back-circle"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Alta Mesa</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+        <img src="../../assets/icon/gifAnimado.gif" class="loading">
+    </div>
+    <ion-card *ngIf='!splash'>
+        <ion-card-header>
+            <div align="center">
+                <img [src]="mesaJson.foto" alt="" width="100px" height="100px" class="icon">
+            </div>
+        </ion-card-header>
+        <ion-item>
+            <ion-label>Tipo:</ion-label>
+            <ion-select [(ngModel)]="pickedName" interface="popover" placeholder="Seleccione" (ionChange)="pickerUser(pickedName)">
+                <ion-select-option *ngFor="let mesa of listaTipo" value="{{mesa.tipo}}">{{mesa.tipo}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <form [formGroup]="miFormulario">
+            <ion-item class="labels" fill="outline">
+                <br>
+                <ion-input type="number" [(ngModel)]="mesaJson.numero" formControlName="numero" placeholder="Numero..." min='1' max='99'></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.numero">
+                        <div class="error-message"
+                        *ngIf="miFormulario.get('numero').hasError(validation.type) && (miFormulario.get('numero').dirty || miFormulario.get('numero').touched)">
+                        {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+            <ion-item class="labels">
+                <br>
+                <ion-input type="number" [(ngModel)]="mesaJson.comensales" formControlName="comensales" placeholder="Comensales..." min='1' max='99'></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.comensales">
+                        <div class="error-message"
+                        *ngIf="miFormulario.get('comensales').hasError(validation.type) && (miFormulario.get('comensales').dirty || miFormulario.get('comensales').touched)">
+                        {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+        </form>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-button (click)="tomarFotografia()" color='cubiertos' class="btnRegistro" expand="block">Tomar foto</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-button (click)="registrar()" class="btnRegistro" color='cubiertos' [disabled]="!miFormulario.valid" expand="block">REGISTRAR MESA</ion-button>
+        </ion-grid>
+    </ion-card>
+</ion-content>

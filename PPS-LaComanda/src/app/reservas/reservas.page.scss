@@ -1,0 +1,77 @@
+ion-content {
+    --background: url("../../assets/img/fondoLogin2.png") 0 0/100% 100% no-repeat;
+}
+
+.snow {
+    --color: snow;
+    font-size: 2em !important;
+
+}
+
+ion-button {
+    margin-top: 2% !important;
+}
+
+ion-card {
+    border-radius: 15px;
+    position: relative;
+    margin-top: 25%;
+    --background: rgb(199, 37, 37, 0.7);
+}
+
+ion-item {
+    --ion-background-color: transparent !important;
+    --ion-text-color: var(--ion-color-cubiertos);
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+    color: snow;
+}
+
+h1::after,
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #ffdf26;
+    top: 0.6em;
+}
+
+h1::before {
+    left: -109px;
+}
+
+h1::after {
+
+    left: 160px;
+}
+
+.divTop {
+    z-index: 99999;
+    top: -100;
+}
+
+ion-back-button {
+    size: 20%;
+}
+
+.loading {
+    z-index: 99999999 !important;
+    width: 150px;
+    height: 150px;
+    position: fixed !important;
+    top: 35%;
+    left: 30%;
+}
+
+.validation-errors {
+    padding: 0 10px;
+}
+
+.error-message {
+    padding: 0 10px;
+    color: var(--ion-color-cubiertos);
+}
