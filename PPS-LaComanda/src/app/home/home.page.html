@@ -11,6 +11,9 @@
         </ion-toolbar>
     </ion-header>
     <ion-content *ngIf='infoUsuario !== undefined; else splashA' class="contenidoTotal">
+        <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+            <img src="../../assets/icon/gifAnimado.gif" class="loading">
+        </div>
         <ng-container *ngIf='!splash'>
             <menu-opciones [usuario]='infoUsuario' [flagMenu]='flagMenu' (flagFunc)='ejecutarFunc($event)'></menu-opciones>
             <div *ngIf="infoUsuario.perfil == 'Mozo'">
