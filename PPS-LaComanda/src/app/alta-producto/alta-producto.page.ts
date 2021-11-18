@@ -71,7 +71,7 @@ export class AltaProductoPage implements OnInit {
           { tipo: "Plato" },
           { tipo: "Postre" }
         ]
-      } else if (user.data().perfil === 'BarTender') {
+      } else if (user.data().perfil === 'Bartender') {
         this.listaProductos = [
           { tipo: "Bebida" },
 

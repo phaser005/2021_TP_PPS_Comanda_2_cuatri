@@ -23,7 +23,7 @@ export class SeccionProduccionComponent implements OnInit {
 		pedido.productos.forEach(p => {
 			if (this.usuario.perfil === 'Cocinero' && (p.tipo === 'Plato' || p.tipo === 'Postre')) {
 				p.estado = true;
-			} else if (this.usuario.perfil === 'BarTender' && p.tipo === 'Bebida') {
+			} else if (this.usuario.perfil === 'Bartender' && p.tipo === 'Bebida') {
 				p.estado = true;
 			}
 		})

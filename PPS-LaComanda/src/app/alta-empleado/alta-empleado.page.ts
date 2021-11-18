@@ -32,7 +32,7 @@ export class AltaEmpleadoPage implements OnInit {
   listaPerfiles = [
     { perfil: "Mozo" },
     { perfil: "Cocinero" },
-    { perfil: "Bar tender" },
+    { perfil: "Bartender" },
     { perfil: "Metre" }
   ]
 

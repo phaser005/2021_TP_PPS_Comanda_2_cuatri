@@ -47,7 +47,7 @@
                 <ion-button (click)="menu.close('mainmenu'); solicitarFunc('mostrarPedidosPagados')" align="center" expand="block" color="cubiertos" shape="round">Pedidos pagados
                 </ion-button>
             </ng-container>
-            <ng-container *ngIf="usuario.perfil == 'Cocinero' || usuario.perfil == 'BarTender'">
+            <ng-container *ngIf="usuario.perfil == 'Cocinero' || usuario.perfil == 'Bartender'">
                 <ion-button (click)="menu.close('mainmenu')" routerLink="/alta-producto" align="center" expand="block" color="cubiertos" shape="round">Agregar Producto</ion-button>
             </ng-container>
         </ion-list>

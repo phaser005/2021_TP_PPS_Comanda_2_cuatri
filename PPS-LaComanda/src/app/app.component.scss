@@ -1,3 +1,8 @@
+ion-content{
+  --background: #3c1e5a;
+}
+
+
 #container {
     text-align: center;
   
@@ -17,7 +22,7 @@
     font-size: 16px;
     line-height: 22px;
   
-    color: #8c8c8c;
+    color: #000000;
   
     margin: 0;
   }
@@ -43,7 +48,7 @@
   
   h1{
     text-decoration: dashed;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
   }
   .marginn{

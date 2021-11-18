@@ -83,7 +83,7 @@ export class HomePage implements OnInit {
 					this.arraySubs.add(this.fmc.subscribirseNotificaciones('nuevaConsulta'));
 					this.arraySubs.add(this.fmc.subscribirseNotificaciones('pedido'));
 					break;
-				case "BarTender":
+				case "Bartender":
 				case "Cocinero":
 					this.arraySubs.add(this.bd.obtenerTodosTiempoReal('pedidos').onSnapshot(datos => {
 						this.listaPedidos = datos.docs.map(dato => {
