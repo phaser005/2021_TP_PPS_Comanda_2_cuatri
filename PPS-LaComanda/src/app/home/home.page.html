@@ -25,7 +25,7 @@
             <div *ngIf="infoUsuario.perfil === 'Anonimo' || infoUsuario.perfil === 'Cliente'">
                 <seccion-clientes [usuario]='infoUsuario' [listaConsultas]='listaConsultas' [listaProductos]='listaProductos' [flagFunc]='flagFunc' [numMesa]='numMesa' (flagMenu)='flagMenu = $event'></seccion-clientes>
             </div>
-            <div *ngIf="infoUsuario.perfil == 'Cocinero' || infoUsuario.perfil == 'BarTender'">
+            <div *ngIf="infoUsuario.perfil == 'Cocinero' || infoUsuario.perfil == 'Bartender'">
                 <seccion-produccion [usuario]='infoUsuario' [listaPedidos]='listaPedidos'></seccion-produccion>
             </div>
         </ng-container>
