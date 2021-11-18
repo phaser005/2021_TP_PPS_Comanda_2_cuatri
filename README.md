@@ -20,33 +20,40 @@ Hernan Ruben Vilar
 
 | Codigo Tarea       | Tarea          | Integrante  | Fecha de Inicio  | Fecha de Finalizacion |
 | ------------- |:-------------:| -----:|-----:|-----:|
-| A | Alta de dueño / supervisor                                                                | Elias      | 31/10/2021 | None |
-| B | Alta de empleados                                                                         | Integrante | 31/10/2021 | None |
-| C | Alta de clientes                                                                          | Integrante | 31/10/2021 | None |
-| D | Alta de Mesa                                                                              | Integrante | 31/10/2021 | None |
-| E | Alta de productos                                                                         | Integrante | 31/10/2021 | None |
-| E | Qr de ingreso al local                                                                    | Integrante | 31/10/2021 | None |
-| F | Qr de la mesa                                                                             | Integrante | 31/10/2021 | None |
-| G | Qr de propina                                                                             | Integrante | 31/10/2021 | None |
-| H | Encuenta Clientes                                                                         | Integrante | 31/10/2021 | None |
-| I | Encuenta Empleados                                                                        | Integrante | 31/10/2021 | None |
-| J | Encuenta Supervisor                                                                       | Integrante | 31/10/2021 | None |
-| K | Agregar un nuevo cliente registrado                                                       | Integrante | 31/10/2021 | None |
-| L | Ingresar al local                                                                         | Integrante | 31/10/2021 | None |
-| M | Realizar pedidos (platos y bebidas)                                                       | Integrante | 31/10/2021 | None |
-| N | Confirmar pedidos                                                                         | Integrante | 31/10/2021 | None |
-| O | Generar reservas agendadas                                                                | Integrante | 31/10/2021 | None |
-| P | Push Notification / Agregar cliente nuevo                                                 | Integrante | 31/10/2021 | None |
-| Q | Push Notification / Ingreso al local                                                      | Integrante | 31/10/2021 | None |
-| R | Push Notification / Consultar al mozo                                                     | Integrante | 31/10/2021 | None |
-| S | Push Notification / Confirmar pedido (por parte del mozo)                                 | Integrante | 31/10/2021 | None |
-| T | Push Notification / Confirmar realización del pedido (por parte del cocinero o bartender) | Integrante | 31/10/2021 | None |
-| U | Push Notification / Generar reservas agendadas / Delivery                                 | Integrante | 31/10/2021 | None |
-| V | Realizar pedido con GPS o dirección.                                                      | Integrante | 31/10/2021 | None |
-| W | Mapa de ruta hasta el domicilio de entrega.                                               | Integrante | 31/10/2021 | None |
-| X | Juego 10% de descuento                                                                    | Integrante | 31/10/2021 | None |
-| Y | Juego para una bebida gratis                                                              | Integrante | 31/10/2021 | None |
-| Z | Juego para un 20% de descuento                                                            | Integrante | 31/10/2021 | None |
+| A | Alta de dueño / supervisor                                                                | Jose       | 31/10/2021 | 02/11/2021 |
+| B | Alta de empleados                                                                         | Henrnan    | 31/10/2021 | 02/11/2021 |
+| C | Alta de clientes                                                                          | Elias      | 31/10/2021 | 03/11/2021 |
+| D | Alta de Mesa                                                                              | Jose       | 31/10/2021 | 02/11/2021 |
+| E | Alta de productos                                                                         | Elias      | 31/10/2021 | 03/11/2021 |
+| E | Qr de ingreso al local                                                                    | Jose       | 31/10/2021 | 03/11/2021 |
+| F | Qr de la mesa                                                                             | Hernan     | 31/10/2021 | 03/11/2021 |
+| G | Qr de propina                                                                             | Elias      | 31/10/2021 | 03/11/2021 |
+| H | Encuenta Clientes                                                                         | Elias      | 31/10/2021 | 14/11/2021 |
+| I | Encuenta Empleados                                                                        | Jose       | 31/10/2021 | 14/11/2021 |
+| J | Encuenta Supervisor                                                                       | Jose       | 31/10/2021 | 14/11/2021 |
+| K | Agregar un nuevo cliente registrado                                                       | Hernan     | 31/10/2021 | 06/11/2021 |
+| L | Ingresar al local                                                                         | Hernan     | 31/10/2021 | 06/11/2021 |
+| M | Realizar pedidos (platos y bebidas)                                                       | Elias      | 31/10/2021 | 08/11/2021 |
+| N | Confirmar pedidos                                                                         | Jose       | 31/10/2021 | 08/11/2021 |
+| O | Generar reservas agendadas                                                                | Hernan     | 31/10/2021 | 09/11/2021 |
+| P | Push Notification / Agregar cliente nuevo                                                 | Hernan     | 31/10/2021 | 14/11/2021 |
+| Q | Push Notification / Ingreso al local                                                      | Hernan     | 31/10/2021 | 14/11/2021 |
+| R | Push Notification / Consultar al mozo                                                     | Hernan     | 31/10/2021 | 14/11/2021 |
+| S | Push Notification / Confirmar pedido (por parte del mozo)                                 | Jose       | 31/10/2021 | 14/11/2021 |
+| T | Push Notification / Confirmar realización del pedido (por parte del cocinero o bartender) | Elias      | 31/10/2021 | 14/11/2021 |
+| U | Push Notification / Generar reservas agendadas / Delivery                                 | None       | 31/10/2021 | 18/11/2021 |
+| V | Realizar pedido con GPS o dirección.                                                      | None       | 31/10/2021 | --/--/---- |
+| W | Mapa de ruta hasta el domicilio de entrega.                                               | None       | 31/10/2021 | --/--/---- |
+| X | Juego 10% de descuento                                                                    | Jose       | 31/10/2021 | 16/11/2021 |
+| Y | Juego para una bebida gratis                                                              | None       | 31/10/2021 | --/--/---- |
+| Z | Juego para un 20% de descuento                                                            | None       | 31/10/2021 | --/--/---- |
+
+| + | Diseño de assets (Icono, splash, menues, svg, etc)                                        | Elias      | 31/10/2021 | 01/11/2021 |
+| + | Implementacion de diseño y correccion de html                                             | Hernan     | 31/10/2021 | 02/11/2021 |
+| + | Corrección de errores de tipeo y sintaxis                                                 | Elias      | 31/10/2021 | 07/11/2021 |
+| + | Correccion de servicios (firrebase, push notifications, etc)                              | Jose       | 31/10/2021 | 13/11/2021 |
+| + | Debug, compilado, y verificacion final de codigo                                          | Elias      | 31/10/2021 | 18/11/2021 |
+| + | Agregado de QR's de mesas, listas de espera y propinas                                    | Elias      | 31/10/2021 | 18/11/2021 |
 
 # QRs de las Mesas
 ## 1
