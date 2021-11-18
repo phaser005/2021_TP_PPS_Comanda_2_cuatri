@@ -47,7 +47,6 @@ Hernan Ruben Vilar
 | X | Juego 10% de descuento                                                                    | Jose       | 31/10/2021 | 16/11/2021 |
 | Y | Juego para una bebida gratis                                                              | None       | 31/10/2021 | --/--/---- |
 | Z | Juego para un 20% de descuento                                                            | None       | 31/10/2021 | --/--/---- |
-
 | + | Diseño de assets (Icono, splash, menues, svg, etc)                                        | Elias      | 31/10/2021 | 01/11/2021 |
 | + | Implementacion de diseño y correccion de html                                             | Hernan     | 31/10/2021 | 02/11/2021 |
 | + | Corrección de errores de tipeo y sintaxis                                                 | Elias      | 31/10/2021 | 07/11/2021 |
