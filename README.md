@@ -58,6 +58,11 @@ Hernan Ruben Vilar
 ## 1
 ![Mesa 1](https://user-images.githubusercontent.com/36265028/142366336-ee1fc0f4-61ad-4a63-9a06-7f6e2483717e.png)
 
+## 2
+![image](https://user-images.githubusercontent.com/36265028/142547238-00442f92-9e88-488a-913d-d5114f106722.png)
+
+## 3
+![image](https://user-images.githubusercontent.com/36265028/142547683-7a1aee30-141a-4bef-a6cb-f4b747fd6004.png)
 
 
 # QRs de la Lista de Espera 
