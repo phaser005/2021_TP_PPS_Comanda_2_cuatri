@@ -26,7 +26,7 @@ Hernan Ruben Vilar
 | D | Alta de Mesa                                                                              | Jose       | 31/10/2021 | 02/11/2021 |
 | E | Alta de productos                                                                         | Elias      | 31/10/2021 | 03/11/2021 |
 | E | Qr de ingreso al local                                                                    | Jose       | 31/10/2021 | 03/11/2021 |
-| F | Qr de la mesa                                                                             | Hernan     | 31/10/2021 | 03/11/2021 |
+| F | Qr de la mesa                                                                             | Elias      | 31/10/2021 | 03/11/2021 |
 | G | Qr de propina                                                                             | Elias      | 31/10/2021 | 03/11/2021 |
 | H | Encuenta Clientes                                                                         | Elias      | 31/10/2021 | 14/11/2021 |
 | I | Encuenta Empleados                                                                        | Jose       | 31/10/2021 | 14/11/2021 |
@@ -37,9 +37,9 @@ Hernan Ruben Vilar
 | N | Confirmar pedidos                                                                         | Jose       | 31/10/2021 | 08/11/2021 |
 | O | Generar reservas agendadas                                                                | Hernan     | 31/10/2021 | 09/11/2021 |
 | P | Push Notification / Agregar cliente nuevo                                                 | Hernan     | 31/10/2021 | 14/11/2021 |
-| Q | Push Notification / Ingreso al local                                                      | Hernan     | 31/10/2021 | 14/11/2021 |
+| Q | Push Notification / Ingreso al local                                                      | Jose       | 31/10/2021 | 14/11/2021 |
 | R | Push Notification / Consultar al mozo                                                     | Hernan     | 31/10/2021 | 14/11/2021 |
-| S | Push Notification / Confirmar pedido (por parte del mozo)                                 | Jose       | 31/10/2021 | 14/11/2021 |
+| S | Push Notification / Confirmar pedido (por parte del mozo)                                 | Hernan     | 31/10/2021 | 14/11/2021 |
 | T | Push Notification / Confirmar realización del pedido (por parte del cocinero o bartender) | Elias      | 31/10/2021 | 14/11/2021 |
 | U | Push Notification / Generar reservas agendadas / Delivery                                 | None       | 31/10/2021 | 18/11/2021 |
 | V | Realizar pedido con GPS o dirección.                                                      | None       | 31/10/2021 | --/--/---- |
